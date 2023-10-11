@@ -1,0 +1,38 @@
+.experince {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .experices {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        .time {
+            color: red;
+        }
+
+        #versed {
+            text-align: center;
+        }
+
+        #sercom {
+            text-align: left;
+        }
+
+        #sf {
+            text-align: right;
+        }
+
+        .empresa {
+            color: red;
+            font-weight: 800;
+        }
+    }
+}

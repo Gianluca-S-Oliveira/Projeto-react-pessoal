@@ -1,0 +1,30 @@
+.card {
+    width: 330px;
+    background-size: contain;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 20px;
+    border: none;
+    gap: 20px;
+
+    a {
+        padding: 20px 5px;
+        background-color: #FF0000;
+        border-radius: 15px;
+        justify-content: center;
+
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        height: 50px;
+        text-align: center;
+        display: flex;
+        font-size: 1.2rem;
+    }
+
+    img {
+        width: 150px;
+        margin: auto;
+    }
+}

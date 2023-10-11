@@ -1,0 +1,16 @@
+.formacao {
+    display: flex;
+    flex-direction: column;
+    background-color: #181818;
+    height: 100vh;
+    padding: 30px;
+    align-items: center;
+
+
+    .cards {
+        display: flex;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}

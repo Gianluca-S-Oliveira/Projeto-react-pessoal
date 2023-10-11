@@ -1,0 +1,27 @@
+.cardHobbie {
+    border: 3px solid red;
+    display: flex;
+    text-align: center;
+    gap: 40px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    border-radius: 20px;
+
+
+}
+
+@media screen and (max-width:900px) {
+    .cardHobbie {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .cardHobbie {
+        img {
+            width: 300px;
+        }
+    }
+}
