@@ -20,7 +20,7 @@ export default function Header() {
         </button>
         <ul className={`menu ${menuOpen ? "open" : ""}`}>
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
             <a href="sobre">Sobre</a>
