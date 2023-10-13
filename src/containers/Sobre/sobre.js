@@ -1,26 +1,30 @@
+import React, { useState } from "react";
+import axios from "axios";
 import "./sobre.scss";
-import ElementoComEstilo from "../../components/SessionTitle/tituloSessao";
-import foto from "../../assets/images/about.jpg";
-import Titulo from "../../components/SessionTitle/tituloSessao";
 export default function Sobre() {
+  const [address, setAddress] = useState("");
+  const fixedCep = "06814000"; // meu cep
+
+  const fetchAddress = () => {
+    axios
+      .get(`https://viacep.com.br/ws/${fixedCep}/json/`)
+      .then((response) => {
+        const data = response.data;
+        const fullAddress = `${data.logradouro}, ${data.bairro}, ${data.localidade} - ${data.uf}`;
+        setAddress(fullAddress);
+      })
+      .catch((error) => {
+        console.error("Erro ao buscar o endereço:", error);
+        setAddress("Endereço não encontrado.");
+      });
+  };
   return (
-    <>
-      {" "}
-      <Titulo texto={"Sobre Mim"} corDeFundo={"red"} />
-      <section className="container-about">
-        {" "}
-        <section className="myimage">
-          <img src={foto} />
-        </section>
-        <section className="metext">
-          <p>
-            Me chamo <span>Gianluca Santos de Oliveira</span> , tenho 20 anos e
-            sou desenvolvedor front end! Llocalizado na avenida augusto de
-            almeida batista, em <span>Embu das Artes</span>, sou uma pessoa que
-            é muito otimista e acredita na melhora constante!
-          </p>
-        </section>
-      </section>
-    </>
+    <div className="containerCep">
+      <p>CEP: {fixedCep}</p>
+      <button onClick={fetchAddress} className="cepbtn">
+        Buscar Endereço
+      </button>
+      <p id="adress"> {address}</p>
+    </div>
   );
 }

@@ -1,71 +1,42 @@
-.container-about {
-    width: 80%;
-    margin: auto;
-
+.containerCep {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row; // Altere para "row" para posicionar o botão ao lado do texto
     align-items: center;
-    color: rgb(30, 30, 30);
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
 
-    .metext {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        padding: 20px;
-        font-size: 1.4rem;
-        flex-direction: column;
+    p {
+        margin-right: 10px; // Adicione um espaçamento entre o texto e o botão
+        font-size: 1.7rem;
+        text-transform: uppercase;
+
     }
 
-    span {
+    #adress {
+        font-size: 1.7rem;
+        margin-top: 100px;
         font-weight: 700;
         color: red;
+        text-align: center;
     }
 
-    .myimage {
+    button {
+        padding: 10px 20px;
+        background-color: #f90808;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        margin: 10% 22%;
+        width: 50%;
 
-        padding: 20px;
-
-        width: 90%;
-        display: flex;
-        background-size: contain;
-        align-items: center;
-        justify-content: center;
-
-        img {
-            height: 500px;
-
-            border: 3px solid red;
-            padding: 20px;
-            border-radius: 30px;
+        &:hover {
+            background-color: #9c0000;
         }
     }
-}
 
-@media screen and (max-width:900px) {
-    .container-about {
-        flex-wrap: wrap;
-        height: 100%;
-        padding-top: 30px;
-        padding-left: 0px;
 
-        .myimage {
-            background-color: white;
-            height: 100%;
-            border-top-left-radius: 40px;
-            border-top-right-radius: 40px;
-            border-bottom-left-radius: 0px;
-            margin-top: 40px;
-            width: 100%;
-            display: flex;
-            background-size: contain;
-            align-items: center;
-            justify-content: center;
-
-            img {
-                height: 350px;
-            }
-        }
-    }
 }
